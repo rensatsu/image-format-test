@@ -1,0 +1,10 @@
+body {
+  font-family: system-ui, sans-serif;
+}
+
+img {
+  border: 1px solid #ccc;
+  max-width: 640px;
+  max-height: 375px;
+  display: block;
+}

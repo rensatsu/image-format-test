@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Image format support</title>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Image format support</h1>
+
+    <h2>AVIF</h2>
+    <picture>
+      <source type="image/avif" srcset="assets/test.avif" />
+      <img src="assets/test.jpg" />
+    </picture>
+
+    <h2>WebP</h2>
+    <picture>
+      <source type="image/webp" srcset="assets/test.webp" />
+      <img src="assets/test.jpg" />
+    </picture>
+
+    <h2>HEIC</h2>
+    <picture>
+      <source type="image/heic" srcset="assets/test.heic" />
+      <img src="assets/test.jpg" />
+    </picture>
+  </body>
+</html>
