@@ -1,0 +1,29 @@
+{
+  "name": "image-format-test",
+  "version": "1.0.0",
+  "description": "Simple website to test available image formats in browsers",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rensatsu/image-format-test.git"
+  },
+  "keywords": [
+    "image",
+    "webp",
+    "avif"
+  ],
+  "author": "Rensatsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rensatsu/image-format-test/issues"
+  },
+  "homepage": "https://github.com/rensatsu/image-format-test#readme",
+  "type": "module",
+  "devDependencies": {
+    "fs-extra": "^10.0.0",
+    "liquidjs": "^9.29.0"
+  }
+}

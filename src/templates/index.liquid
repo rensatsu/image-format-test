@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Image format support</title>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Image format support</h1>
+    <p>
+      This is a simple website to test available image formats in browsers.
+    </p>
+    <p>
+      <a href="https://github.com/rensatsu/image-format-test" target="_blank">Repository</a>.
+    </p>
+
+    {%- for format in formats %}
+    <h2>{{ format.title }}</h2>
+    <picture>
+      {%- if format.mime.first %}
+        {%- for mime in format.mime %}
+        <source
+            type="{{ mime }}"
+            srcset="assets/{{ imageBaseName }}.{{ format.extension }}"
+        />
+        {%- endfor %}
+      {%- else %}
+      <source
+          type="{{ format.mime }}"
+          srcset="assets/{{ imageBaseName }}.{{ format.extension }}"
+      />
+      {%- endif %}
+
+      <img src="assets/{{ imageBaseName }}.{{ fallback.extension }}" />
+    </picture>
+    {%- endfor %}
+  </body>
+</html>
