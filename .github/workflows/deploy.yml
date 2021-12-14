@@ -22,7 +22,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install imagemagick -y --no-install-recommends
+          sudo apt-get install imagemagick ghostscript gsfonts -y --no-install-recommends
           npm install -g netlify-cli
 
       - name: Install node packages
