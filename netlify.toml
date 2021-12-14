@@ -1,6 +1,6 @@
 [build]
   publish = "dist/"
-  command = "netlify.sh && npm run build"
+  command = "bash ./netlify.sh && npm run build"
 
 [[headers]]
   for = "/*"
