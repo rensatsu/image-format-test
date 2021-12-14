@@ -42,4 +42,7 @@ async function main() {
     await fs.copy(publicDir, outDir);
 }
 
-await main();
+await main().catch((e) => {
+    console.error(e);
+    throw e;
+});

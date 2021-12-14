@@ -2,15 +2,15 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { Liquid } from "liquidjs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const outDir = path.join(__dirname, "/../dist/");
-const publicDir = path.join(__dirname, "/../public/");
+const base = path.dirname(fileURLToPath(import.meta.url));
+const outDir = path.join(base, "/../dist/");
+const publicDir = path.join(base, "/../public/");
 const indexPath = path.join(outDir, "index.html");
 const outAssetsDir = path.join(outDir, "/assets/");
 const imageBaseName = "test";
 
 const engine = new Liquid({
-    root: path.resolve(__dirname, "templates"),
+    root: path.resolve(base, "templates"),
     extname: ".liquid",
     globals: {
         outDir,
@@ -20,4 +20,4 @@ const engine = new Liquid({
     }
 });
 
-export { publicDir, indexPath, outDir, outAssetsDir, imageBaseName, engine };
+export { publicDir, indexPath, outDir, outAssetsDir, imageBaseName, engine, base };

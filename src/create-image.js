@@ -1,10 +1,11 @@
 import { exec } from "child_process";
 import path from "path";
 import { promisify } from "util";
+import { getImagemagick } from "./get-imagemagick.js";
 import { imageBaseName, outAssetsDir } from "./globals.js";
 const execPromise = promisify(exec);
 
-function createImage({ gradient, format }) {
+async function createImage({ gradient, format }) {
     const { title, extension } = format;
     const output = path.join(outAssetsDir, `${imageBaseName}.${extension}`);
 
@@ -19,7 +20,11 @@ function createImage({ gradient, format }) {
         `"${output}"`,
     ].join(" ");
 
-    return execPromise(`convert ${opts}`);
+    const magick = await getImagemagick();
+
+    console.log({ magick, opts });
+
+    return await execPromise(`${magick} ${opts}`);
 };
 
 export { createImage };

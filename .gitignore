@@ -2,3 +2,6 @@ public/assets/
 dist/
 node_modules/
 magick.AppImage
+
+# Local Netlify folder
+.netlify
