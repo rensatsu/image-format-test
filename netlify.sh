@@ -5,5 +5,5 @@ set -o nounset
 
 curl -L https://download.imagemagick.org/ImageMagick/download/binaries/magick -o magick.AppImage
 
-alias convert = ./magick.AppImage
-alias magick = ./magick.AppImage
+alias convert='./magick.AppImage'
+alias magick='./magick.AppImage'
