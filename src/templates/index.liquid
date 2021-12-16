@@ -8,6 +8,7 @@
     <title>Image format support</title>
 
     <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
     <h1>Image format support</h1>
@@ -35,7 +36,10 @@
       />
       {%- endif %}
 
-      <img src="assets/{{ imageBaseName }}.{{ fallback.extension }}" />
+      <img
+        src="assets/{{ imageBaseName }}.{{ fallback.extension }}"
+        alt="Test image for format {{ format.title }}"
+      />
     </picture>
     {%- endfor %}
   </body>
