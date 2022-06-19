@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "node src/index.js",
-    "deploy": "npx wrangler pages publish public"
+    "deploy": "npx wrangler pages publish dist"
   },
   "repository": {
     "type": "git",
