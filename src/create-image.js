@@ -14,6 +14,7 @@ async function createImage({ gradient, format }) {
         `-fill white -undercolor "#00000090"`,
         `-gravity Center`,
         `-pointsize 24`,
+        `-font "DejaVu-Sans"`,
         `-annotate +0+5 "${title}"`,
         `-append`,
         `-quality 90%`,
