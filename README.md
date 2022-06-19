@@ -15,5 +15,5 @@ npm run build
 Deploy app:
 
 ```bash
-netlify deploy --prodIfUnlocked
+npm run deploy
 ```
