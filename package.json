@@ -26,7 +26,7 @@
   "devDependencies": {
     "command-exists": "^1.2.9",
     "fs-extra": "^10.1.0",
-    "liquidjs": "^9.37.0",
+    "liquidjs": "^10.0.0",
     "wrangler": "^2.0.14"
   }
 }
